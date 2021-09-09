@@ -9,7 +9,7 @@ export default class Profile {
 
 export const profiles = [
   new Profile('David', 'Rasch', 'Mr.', [
-    'Developer 2020',
+    'Developer 2021',
     'Angular Instructor 2021',
   ]),
   new Profile('Alan', 'Cox', 'Mr.', ['CTO 2020-2021']),

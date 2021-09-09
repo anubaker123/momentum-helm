@@ -1,0 +1,5 @@
+<p>Hello {{ getProfile().firstName }}</p>
+<select
+  ng-model="selected"
+  ng-options="firstName as personProfile.firstName for personProfile in getProfiles()"
+></select>

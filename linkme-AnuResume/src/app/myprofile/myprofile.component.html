@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let personProfile of personProfiles">
+    <div *ngIf="!personProfile.isLoggedIn">
+      {{ personProfile.firstName }}
+      {{ personProfile.lastName }}
+      {{ personProfile.email }}
+      <div *ngIf="isConnected(personProfile); else elseBlock1">
+        <button (click)="onClickConnect(personProfile)">Connect</button>
+      </div>
+      <ng-template #elseBlock1>
+        <div>
+          <button (click)="onClickConnect(personProfile)">DisConnect</button>
+        </div></ng-template
+      >
+      <p></p>
+    </div>
+  </li>
+</ul>

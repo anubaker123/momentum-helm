@@ -1,19 +1,28 @@
 <router-outlet></router-outlet>
-<!-- <div>
-  <p>{{ firstProfile().firstName }}</p>
-  <p>{{ firstProfileGet.firstName }}</p>
-  <p>{{ profiles[1].firstName.toUpperCase() }}</p>
-  <p>{{ profiles[2].firstName }}</p>
-  <input [value]="'steve' + 10" />
-  <div [innerText]="firstProfileGet.firstName"></div>
-  <button (click)="onClick()">Clear</button>
-</div> -->
-<div><button (click)="onClick()">Clear</button></div>
-<div *ngIf="winner != ''" class="danger">You Win! {{ this.winner }}</div>
-<mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let item of [0, 1, 2, 3, 4, 5, 6, 7, 8]">
-    <button (click)="onClickBtn(item)">
-      {{ getTic(item) }}
-    </button></mat-grid-tile
-  >
-</mat-grid-list>
+<!-- <nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>nav 3</li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>List</nz-breadcrumb-item>
+      <nz-breadcrumb-item>App</nz-breadcrumb-item>
+    </nz-breadcrumb>
+    <div class="inner-content">
+      <app-profile
+        [profile]="profiles[0]"
+        name="Profile Editing Page"
+      ></app-profile>
+      <app-myprofile></app-myprofile>
+    </div>
+  </nz-content>
+  <nz-footer>Designed by Helm and Momoentum Crew</nz-footer>
+</nz-layout> -->
+<app-mydetails [personProfiles]="personProfiles"></app-mydetails>
+<app-myprofile [personProfiles]="personProfiles"></app-myprofile>
